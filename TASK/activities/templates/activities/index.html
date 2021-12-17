@@ -1,0 +1,16 @@
+{% extends 'activities/base.html' %}
+
+{% block body %}
+    <h1>ToDo List</h1>
+    <hr>
+
+    {% for taskss in lol %}
+        <li>{{taskss}}</li><br>
+
+    {% empty %}
+        <h1>Empty Task</h1>
+
+    {% endfor %}
+
+    <a href="{% url 'activities:add' %}">Add List</a>
+{% endblock %}

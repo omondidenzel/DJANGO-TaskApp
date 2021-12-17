@@ -1,0 +1,13 @@
+{% extends 'activities/base.html' %}
+
+{% block body %}
+    <h1>Add Task</h1>
+
+    <form action="{% url 'activities:add' %}" method = 'post'>
+        {% csrf_token %}
+        {{form}}
+        <input type="submit"><br>
+    </form>
+
+    <a href="{%url 'activities:index' %}">Go back to list</a>
+{% endblock %}
